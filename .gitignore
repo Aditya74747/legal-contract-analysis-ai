@@ -1,0 +1,25 @@
+# Dataset (download separately, see data/README.md)
+data/raw/
+data/processed/
+
+# Trained model weights and checkpoints (too large for git, see models/README.md)
+models/finetuned/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Gradio
+.gradio/
+flagged/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

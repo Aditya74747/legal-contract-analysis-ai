@@ -1,0 +1,65 @@
+# config.yaml — Central configuration for Legal Contract Analysis AI
+
+dataset:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  max_seq_length: 512
+  seed: 42
+
+model:
+  preset: "distilbert"
+
+  presets:
+    distilbert:
+      base_model: "distilbert-base-uncased"
+      task: "classification"
+      use_lora: false
+      num_labels: 82
+
+    pol-bert-large:
+      base_model: "pile-of-law/legalbert-large-1.7M-1"
+      task: "classification"
+      use_lora: false
+      num_labels: 82
+
+    legal-bert-base:
+      base_model: "nlpaueb/legal-bert-base-uncased"
+      task: "classification"
+      use_lora: false
+      num_labels: 82
+
+    deberta:
+      base_model: "microsoft/deberta-v3-small"
+      task: "classification"
+      use_lora: false
+      num_labels: 82
+
+training:
+  output_dir: "models/finetuned"
+  num_epochs: 10               # DistilBERT needs more epochs than large models
+  batch_size: 64               # per GPU on Kaggle T4
+  gradient_accumulation_steps: 2   # effective batch = 64 × 2 × 2 GPUs = 256
+  learning_rate: 3.0e-5        # optimal for DistilBERT
+  warmup_ratio: 0.06
+  weight_decay: 0.01
+  evaluation_strategy: "epoch"
+  save_strategy: "epoch"
+  load_best_model_at_end: true
+  metric_for_best_model: "f1"
+  fp16: false                  # Trainer picks bf16/fp16 automatically on GPU
+  dataloader_pin_memory: true
+  logging_steps: 25
+  seed: 42
+
+inference:
+  model_path: "models/finetuned/best_model"
+  threshold: 0.5
+  device: "auto"
+
+ui:
+  host: "0.0.0.0"
+  port: 7860
+  share: false
