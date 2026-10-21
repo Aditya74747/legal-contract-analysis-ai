@@ -272,5 +272,3 @@ legal-contract-analysis-ai/
 - **Code:** [MIT License](LICENSE)
 - **Dataset:** [CUAD v1](https://www.atticusprojectai.org/cuad) by The Atticus Project, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). *Hendrycks et al., "CUAD: An Expert-Annotated NLP Dataset for Legal Contract Review", NeurIPS 2021.*
 - **Base model:** [`distilbert-base-uncased`](https://huggingface.co/distilbert-base-uncased) (Apache 2.0)
-
-<sub>Built for the Computational Intelligence course at HFT Stuttgart, Summer Semester 2026.</sub>
