@@ -11,7 +11,7 @@ Upload a contract (PDF, DOCX or TXT) and the model finds clauses such as **Gover
 ![Transformers](https://img.shields.io/badge/🤗%20Transformers-DistilBERT-FFD21E?style=for-the-badge)
 ![Gradio](https://img.shields.io/badge/Gradio-UI-F97316?style=for-the-badge&logo=gradio&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
+ 
 <br>
 
 | Test accuracy | Macro F1 | Clause classes | Training samples | Training time |
