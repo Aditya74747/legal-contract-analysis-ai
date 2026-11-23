@@ -11,7 +11,9 @@ Upload a contract (PDF, DOCX or TXT) and the model finds clauses such as **Gover
 ![Transformers](https://img.shields.io/badge/🤗%20Transformers-DistilBERT-FFD21E?style=for-the-badge)
 ![Gradio](https://img.shields.io/badge/Gradio-UI-F97316?style=for-the-badge&logo=gradio&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
- 
+
+**Built by** [Aditya Ghatage](https://github.com/Aditya74747) · [Ayesha](https://github.com/ayeshasiddikha1101)
+
 <br>
 
 | Test accuracy | Macro F1 | Clause classes | Training samples | Training time |
@@ -32,6 +34,7 @@ Upload a contract (PDF, DOCX or TXT) and the model finds clauses such as **Gover
 - [Usage](#-usage)
 - [Project Structure](#-project-structure)
 - [Limitations](#%EF%B8%8F-limitations)
+- [Authors](#-authors)
 - [Dataset & License](#-dataset--license)
 
 ---
@@ -264,6 +267,15 @@ legal-contract-analysis-ai/
 - **Paragraph-based.** Contracts are split at blank lines, so clauses spread over several paragraphs, or paragraphs with several clauses, can be misclassified.
 - **Text-based PDFs only.** Scanned PDFs need OCR first.
 - **English only**, and trained on US commercial contracts.
+
+---
+
+## 👥 Authors
+
+| Name | GitHub |
+|---|---|
+| **Aditya Ghatage** | [@Aditya74747](https://github.com/Aditya74747) |
+| **Ayesha** | [@ayeshasiddikha1101](https://github.com/ayeshasiddikha1101) |
 
 ---
 
